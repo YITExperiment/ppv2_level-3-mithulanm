@@ -77,22 +77,22 @@ def start_game():
   while True:
      caterpillar.forward(caterpillar_speed)
      if caterpillar.distance(leaf)<20:
-       Place_leaf()
+       place_leaf()
        caterpillar_length = caterpillar_length + 1
        caterpillar.shapesize(1,caterpillar_length,1)
        caterpillar_speed = caterpillar_speed + 1
        score = score + 10
        display_score(score)
      if outside_window():
-       game_over()
-       break
+        game_over()
+        break
 
 def move_up():
    if caterpillar.heading() == 0 or caterpillar.heading() == 180:
      caterpillar.setheading(90)
 
 def move_down():
-  if caterpillar.heading() == 0 or caterpillar.heading() == 180:
+   if caterpillar.heading() == 0 or caterpillar.heading() == 180:
     caterpillar.setheading(270)
 
 def move_left():
@@ -100,7 +100,7 @@ def move_left():
      caterpillar.setheading(180)
 
 def move_right():
-  if caterpillar.heading() == 90 or caterpillar.heading() == 270:
+   if caterpillar.heading() == 90 or caterpillar.heading() == 270:
     caterpillar.setheading(0)
 
 t.onkey(start_game,'space')
